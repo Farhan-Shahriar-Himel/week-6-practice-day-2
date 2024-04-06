@@ -1,0 +1,46 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load humanize %}
+{% block head_title %} Transaction Report{% endblock %} {% block content %}
+
+
+<div class="my-10 py-3 px-4 bg-white rounded-xl shadow-md">
+  <h1 class="font-bold text-3xl text-center pb-5 pt-2">Transaction Report</h1>
+  <hr />
+  <form method="GET" action="">
+    <div class="flex justify-center">
+      <div
+        class="mt-10 pl-3 pr-2 bg-white border rounded-md border-gray-500 flex justify-between items-center relative w-4/12 mx-2"
+      >
+        <label for="receiver_acc_num">Account_Number:</label>
+        <input
+          class="appearance-none w-full outline-none focus:outline-none active:outline-none"
+          type="text"
+          id="receiver_acc_num"
+          name="receiver_acc_num"
+        />
+      </div>
+ 
+      <div
+        class="mt-10 pl-3 pr-2 bg-white border rounded-md border-gray-500 flex justify-between items-center relative w-4/12"
+      >
+        <label for="amount_to_send">Amount:</label>
+        <input
+          class="appearance-none w-full outline-none focus:outline-none active:outline-none"
+          type="text"
+          id="amount_to_send"
+          name="amount_to_send"
+        />
+      </div>
+      <div class="mt-10 pl-3 pr-2 flex justify-between items-center relative w-4/12">
+        <button
+          class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
